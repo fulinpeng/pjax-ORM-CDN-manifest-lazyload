@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.praiseBox {
+    display: inline-block;
+    width: 374px;
+    position: relative;
+    transform: scale(1);
+    height: 338px;
+}
+
+.showNum {
+    color: green;
+    font-size: 30px;
+    line-height: 374px;
+}

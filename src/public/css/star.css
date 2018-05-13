@@ -1,0 +1,30 @@
+.starBox {
+    height: 200px;
+    postion: relative;
+}
+
+.angle {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    border-bottom: 168px solid red;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    transform-origin: 50% 87%;
+}
+
+.angle2 {
+    transform: rotate(72deg);
+}
+
+.angle3 {
+    transform: rotate(144deg);
+}
+
+.angle4 {
+    transform: rotate(216deg);
+}
+
+.angle5 {
+    transform: rotate(288deg);
+}

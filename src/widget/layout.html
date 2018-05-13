@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//cdn.bootcss.com"> {% block css %}{% endblock %}
+</head>
+
+<body>
+    <div>
+        <a href="/index/thumb" rel="external nofollow">to thumb</a> .
+        <a href="/index/star" rel="external nofollow">to star</a>
+    </div>
+    <div id="container">
+        {% block content %}{% endblock %}
+    </div>
+    <div id="advertisement"></div>
+
+    <script src='https://cdn.bootcss.com/jquery/3.2.1/jquery.js'></script>
+    <script src='https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js'></script>
+    <script src='https://cdn.bootcss.com/axios/0.17.1/axios.js'></script>
+    <script src='https://cdn.bootcss.com/x-tag/1.5.11/x-tag-core.js'></script>
+    <script src="https://cdn.bootcss.com/localforage/1.7.1/localforage.js"></script>
+    {% block js %} {% endblock %}
+</body>
+
+</html>
