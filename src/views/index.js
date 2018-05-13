@@ -26,6 +26,7 @@ module.exports = function(templateParams) {
                         if (localStorage.getItem(name)) {
                             $('<scr'+'ipt>'+localStorage.getItem(name)+'</scr'+'ipt>').attr('id', index).appendTo($('body'));
                         } else {
+                            // $.getScript 请求载入并立即执行，是对 $.ajax 的封装
                             $.getScript({
                                 url:name,
                                 success:(result)=>{
