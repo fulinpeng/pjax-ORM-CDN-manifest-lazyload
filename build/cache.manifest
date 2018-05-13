@@ -1,0 +1,13 @@
+CACHE MANIFEST
+# Time: Sun May 13 2018 16:41:34 GMT+0800 (中国标准时间)
+# unit2 v1.0.0
+
+CACHE:
+./public/css/tag-0f402.css
+./public/css/main-0f402.css
+./public/script/commons.js
+./public/script/main-0f402.js
+./public/script/tag-0f402.js
+
+NETWORK:
+ *

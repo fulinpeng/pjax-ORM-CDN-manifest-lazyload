@@ -1,19 +1,8 @@
-/*
- * @Author: fulp 
- * @Date: 2018-05-01 15:43:50 
- * @Last Modified by: fulp
- * @Last Modified time: 2018-05-13 16:13:05
- */
 
-module.exports = function(templateParams) {
-    //   var _cssList = ["vendor"];
-    var webAssetsHelp = require("./webAssetsHelp.js")(templateParams);
-
-    var _html = `
         {% extends './layout.html' %}
         {% block title %}{{title}}{% endblock %}
         {% block css %}
-        ${webAssetsHelp.styles}
+        <link rel="stylesheet" type="text/css" href="http://localhost:3000/public/css/main-0f402.css"/><link rel="stylesheet" type="text/css" href="http://localhost:3000/public/css/tag-0f402.css"/>
         {% endblock %}
         {% block content %}
         {% include "../widget/index.html" %}
@@ -21,7 +10,7 @@ module.exports = function(templateParams) {
         {% block js %}
             <script>
                 ~function(){
-                    var arrJs=[${webAssetsHelp.jsNameForCache}];
+                    var arrJs=["http://localhost:3000/public/script/commons.js","http://localhost:3000/public/script/main-0f402.js","http://localhost:3000/public/script/tag-0f402.js"];
                     var finishGet=false;
                     for(var i=0; i<arrJs.length; i++){
                         var path=arrJs[i];
@@ -49,7 +38,4 @@ module.exports = function(templateParams) {
                     }
                 }();
             </script>
-        {% endblock %}`;
-
-    return _html;
-};
+        {% endblock %}

@@ -1,3 +1,5 @@
+* v1.1 新增：优化静态资源分发器
+---------------------------------------
 # CDN预加载
 
 * 使用 DNS预加载(DNS Prefetching)
@@ -34,3 +36,10 @@
 * output 设置 publicPath 属性
 * 有时在处理 html 和 css 中的路路径有冲突，比如同时使用了一张图片
   * 此时需要用插件来配置 html-withimg-loader 单独`处理HTML中图片路径`问题
+
+# 优化静态资源分发器
+* 使静态资源加载的并发数最大化
+* 使用 lazyload 插件 路径 https://github.com/rgrove/lazyload/
+  * 异步请求资源，可以放到 LocalStorage 中
+  * 当请求时间最长的资源请求完毕，再按顺序执行文件
+  * 怎么知道最耗时的请求是哪个，怎么按顺序执行？lazyload 插件帮我们做了
