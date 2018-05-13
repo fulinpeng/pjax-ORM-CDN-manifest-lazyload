@@ -1,0 +1,13 @@
+CACHE MANIFEST
+# Time: Sun May 13 2018 14:59:05 GMT+0800 (中国标准时间)
+# unit2 v1.0.0
+
+CACHE:
+./public/css/tag-3539b.css
+./public/css/main-3539b.css
+./public/script/commons.js
+./public/script/main-3539b.js
+./public/script/tag-3539b.js
+
+NETWORK:
+ *

@@ -1,0 +1,28 @@
+
+        {% extends './layout.html' %}
+        {% block title %}{{title}}{% endblock %}
+        {% block css %}
+        <link rel="stylesheet" type="text/css" href="http://localhost:3000/public/css/main-3539b.css"/><link rel="stylesheet" type="text/css" href="http://localhost:3000/public/css/tag-3539b.css"/>
+        {% endblock %}
+        {% block content %}
+        {% include "../widget/index.html" %}
+        {% endblock %}
+        {% block js %}
+            <script>
+                ~function(){
+                    var arrJs=["http://localhost:3000/public/script/commons.js","http://localhost:3000/public/script/main-3539b.js","http://localhost:3000/public/script/tag-3539b.js"];
+                    arrJs.forEach((name, index)=>{
+                        if (localStorage.getItem(name)) {
+                            $('<scr'+'ipt>'+localStorage.getItem(name)+'</scr'+'ipt>').attr('id', index).appendTo($('body'));
+                        } else {
+                            $.getScript({
+                                url:name,
+                                success:(result)=>{
+                                    localStorage.setItem(name, result);
+                                }
+                            });
+                        }
+                    });
+                }();
+            </script>
+        {% endblock %}
